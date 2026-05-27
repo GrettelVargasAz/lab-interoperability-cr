@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lab Interoperability CR</title>
 
     <style>
@@ -11,24 +14,51 @@
             font-family: Arial, sans-serif;
             margin:0;
             background:#f5f5f5;
+            color:#333;
         }
 
         header{
             background:#1f4e79;
             color:white;
-            padding:60px;
+            padding:60px 20px;
             text-align:center;
         }
 
-        h1{
+        header h1{
             margin:0;
             font-size:42px;
         }
 
+        header p{
+            margin-top:15px;
+            font-size:18px;
+        }
+
         .container{
             padding:40px;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        h2{
+            color:#1f4e79;
+            margin-top:50px;
+        }
+
+        .workflow{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            margin-bottom:40px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            text-align:center;
+            font-size:18px;
+            line-height:2;
+        }
+
+        .cards{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
             gap:20px;
         }
 
@@ -39,20 +69,28 @@
             box-shadow:0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .card h2{
+        .card h3{
             margin-top:0;
+            color:#1f4e79;
+        }
+
+        .card p{
+            line-height:1.6;
         }
 
         .card a{
+            display:inline-block;
+            margin-top:15px;
             text-decoration:none;
             color:#1f4e79;
             font-weight:bold;
         }
 
         footer{
-            text-align:center;
-            padding:20px;
             background:#ddd;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
         }
 
     </style>
@@ -72,54 +110,183 @@
 
 </header>
 
-<section class="container">
+<div class="container">
 
-    <div class="card">
-        <h2>QGIS</h2>
+    <!-- INTRODUCCIÓN -->
 
-        <p>
-            Scripts y automatización KoboToolbox → QGIS.
-        </p>
+    <h2>Laboratorio de Interoperabilidad Geoespacial</h2>
 
-        <a href="qgis/">Ver módulo</a>
+    <div class="workflow">
+
+        KoboToolbox
+        ↓<br>
+
+        APIs / GeoJSON
+        ↓<br>
+
+        QGIS y ArcGIS Pro
+        ↓<br>
+
+        Google Colab
+        ↓<br>
+
+        Google Earth Engine
+        ↓<br>
+
+        Dashboards / WebGIS / Monitoreo
+
     </div>
 
-    <div class="card">
-        <h2>ArcGIS Pro</h2>
+    <!-- MÓDULOS -->
 
-        <p>
-            Integración Kobo → ArcGIS Pro.
-        </p>
+    <h2>Módulos del Laboratorio</h2>
 
-        <a href="arcgis/">Ver módulo</a>
+    <div class="cards">
+
+        <!-- KOBO -->
+
+        <div class="card">
+
+            <h3>KoboToolbox</h3>
+
+            <p>
+                Captura digital de datos geoespaciales,
+                formularios móviles, monitoreo de campo
+                e interoperabilidad territorial.
+            </p>
+
+            <a href="kobotoolbox/">
+                Ver módulo
+            </a>
+
+        </div>
+
+        <!-- QGIS -->
+
+        <div class="card">
+
+            <h3>QGIS</h3>
+
+            <p>
+                Scripts y automatización para conexión
+                KoboToolbox → QGIS mediante APIs y GeoJSON.
+            </p>
+
+            <a href="qgis/">
+                Ver módulo
+            </a>
+
+        </div>
+
+        <!-- ARCGIS -->
+
+        <div class="card">
+
+            <h3>ArcGIS Pro</h3>
+
+            <p>
+                Integración automática KoboToolbox →
+                ArcGIS Pro utilizando Python y ArcPy.
+            </p>
+
+            <a href="arcgis/">
+                Ver módulo
+            </a>
+
+        </div>
+
+        <!-- COLAB -->
+
+        <div class="card">
+
+            <h3>Google Colab</h3>
+
+            <p>
+                Automatización geoespacial, APIs,
+                análisis espacial y procesamiento Python.
+            </p>
+
+            <a href="colab/">
+                Ver módulo
+            </a>
+
+        </div>
+
+        <!-- GEE -->
+
+        <div class="card">
+
+            <h3>Google Earth Engine</h3>
+
+            <p>
+                Procesamiento satelital, monitoreo de
+                restauración e indicadores ambientales.
+            </p>
+
+            <a href="gee/">
+                Ver módulo
+            </a>
+
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <div class="card">
+
+            <h3>Dashboards y WebGIS</h3>
+
+            <p>
+                Visualización interactiva de datos,
+                monitoreo territorial y plataformas web.
+            </p>
+
+            <a href="dashboard/">
+                Ver módulo
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="card">
-        <h2>Google Earth Engine</h2>
+    <!-- CASOS DE USO -->
 
-        <p>
-            Scripts y análisis satelital.
-        </p>
+    <h2>Casos de Uso</h2>
 
-        <a href="gee/">Ver módulo</a>
+    <div class="workflow">
+
+        • Restauración de ecosistemas<br>
+        • Monitoreo territorial<br>
+        • MRV y seguimiento ambiental<br>
+        • Inventarios geoespaciales<br>
+        • Biodiversidad y parcelas<br>
+        • Agricultura y paisaje<br>
+        • Automatización SIG<br>
+        • Interoperabilidad institucional
+
     </div>
 
-    <div class="card">
-        <h2>Google Colab</h2>
-
-        <p>
-            APIs, automatización y notebooks.
-        </p>
-
-        <a href="colab/">Ver módulo</a>
-    </div>
-
-</section>
+</div>
 
 <footer>
 
     <p>
-        Laboratorio de Interoperabilidad Geoespacial CR
+        Lab Interoperability CR •
+        KoboToolbox • QGIS • ArcGIS • Earth Engine • APIs
+    </p>
+
+</footer>
+    <footer>
+
+    <p>
+        Lab Interoperability CR
+    </p>
+
+    <p>
+        KoboToolbox • QGIS • ArcGIS • Google Earth Engine
+    </p>
+
+    <p>
+        Desarrollado por Grettel Vargas Azofeifa
     </p>
 
 </footer>
