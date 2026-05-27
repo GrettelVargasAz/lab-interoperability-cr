@@ -1,3 +1,4 @@
+```html id="u9d7wq"
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Laboratorio de Interoperabilidad para CR</title>
+    <title>Laboratorio de Interoperabilidad Geoespacial CR</title>
 
     <style>
 
@@ -92,25 +93,35 @@
             color:#0f172a;
         }
 
-        .info-section{
+        /* ====== SECCIÓN INTEROPERABILIDAD ====== */
+
+        .info-wrapper{
+            display:flex;
+            justify-content:flex-start;
+            padding:20px 50px 60px 50px;
+            max-width:1400px;
+            margin:auto;
+        }
+
+        .info-column{
+            width:45%;
             background:white;
-            max-width:1300px;
-            margin:20px auto 50px auto;
-            padding:50px;
-            border-radius:18px;
+            padding:45px;
+            border-radius:20px;
             box-shadow:0 4px 15px rgba(0,0,0,0.08);
         }
 
-        .info-section h2{
+        .info-column h2{
             color:#1f4e79;
-            margin-bottom:20px;
-            font-size:32px;
+            font-size:42px;
+            margin-bottom:25px;
         }
 
-        .info-section p{
+        .info-column p{
             font-size:18px;
             line-height:1.9;
             color:#475569;
+            margin-bottom:22px;
         }
 
         footer{
@@ -118,12 +129,15 @@
             color:white;
             text-align:center;
             padding:35px 20px;
+            margin-top:40px;
         }
 
         footer p{
             margin:8px 0;
             font-size:15px;
         }
+
+        /* ====== RESPONSIVE ====== */
 
         @media(max-width:768px){
 
@@ -135,9 +149,17 @@
                 padding:25px;
             }
 
-            .info-section{
-                margin:20px;
+            .info-wrapper{
+                padding:20px;
+            }
+
+            .info-column{
+                width:100%;
                 padding:30px;
+            }
+
+            .info-column h2{
+                font-size:32px;
             }
 
         }
@@ -147,9 +169,14 @@
 </head>
 
 <body>
-    </header>
+
+    <!-- ===== HEADER ===== -->
+
+    <!-- ===== MÓDULOS ===== -->
 
     <section class="modules">
+
+        <!-- MÓDULO 1 -->
 
         <div class="card">
 
@@ -171,6 +198,8 @@
 
         </div>
 
+        <!-- MÓDULO 2 -->
+
         <div class="card">
 
             <div class="module-number">
@@ -190,6 +219,8 @@
             </div>
 
         </div>
+
+        <!-- MÓDULO 3 -->
 
         <div class="card">
 
@@ -211,6 +242,8 @@
 
         </div>
 
+        <!-- MÓDULO 4 -->
+
         <div class="card">
 
             <div class="module-number">
@@ -230,6 +263,8 @@
             </div>
 
         </div>
+
+        <!-- MÓDULO 5 -->
 
         <div class="card">
 
@@ -253,17 +288,33 @@
 
     </section>
 
-    <section class="info-section">
+    <!-- ===== INTEROPERABILIDAD ===== -->
 
-        <h2>
-            Interoperabilidad Geoespacial
-        </h2>
+    <section class="info-wrapper">
 
-        <p>
-            Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo. El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
-        </p>
+        <div class="info-column">
+
+            <h2>
+                Interoperabilidad Geoespacial
+            </h2>
+
+            <p>
+                Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo.
+            </p>
+
+            <p>
+                El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
+            </p>
+
+            <p>
+                Asimismo, en el marco del curso SEPAL, se incorporan nuevos temas orientados a fortalecer la interoperabilidad entre herramientas geoespaciales y otras plataformas impulsadas por la FAO.
+            </p>
+
+        </div>
 
     </section>
+
+    <!-- ===== FOOTER ===== -->
 
     <footer>
 
@@ -271,6 +322,7 @@
             Lab Interoperability CR
         </p>
 
+       
         <p>
             Desarrollado por Grettel Vargas Azofeifa
         </p>
@@ -280,3 +332,4 @@
 </body>
 
 </html>
+```
