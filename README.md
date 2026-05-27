@@ -150,14 +150,10 @@
 
     <header>
 
-        <h1>Lab Interoperability CR</h1>
+        <h1>Lab Interoperabilidad Nacional</h1>
 
         <p>
             Herramientas para monitoreo, restauración y automatización geoespacial
-        </p>
-
-        <p>
-            KoboToolbox • Herramientas SIG • Análisis en la nube • Dashboards y estadísticas
         </p>
 
         <p>
@@ -243,7 +239,7 @@
             </p>
 
             <div class="tool-name">
-                Dashboards • WebGIS • Estadísticas
+                Dashboards • Estadísticas
             </div>
 
         </div>
@@ -265,7 +261,7 @@
     <footer>
 
         <p>
-            Laboratorio de Interoperabilidad Nacional
+            Lab Interoperability CR
         </p>
 
         <p>
