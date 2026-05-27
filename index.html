@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lab Interoperability CR</title>
+    <title>Lab Interoperabilidad Nacional</title>
 
     <style>
 
@@ -18,118 +18,126 @@
 
         body{
             font-family: Arial, sans-serif;
-            background:#f4f7fb;
-            color:#333;
+            background:#f4f6f9;
+            color:#1e293b;
         }
 
-        /* HEADER */
-
         header{
-            background:linear-gradient(135deg,#1f4e79,#163b5c);
+            background:#1f4e79;
             color:white;
             text-align:center;
-            padding:80px 20px;
+            padding:60px 20px;
         }
 
         header h1{
-            font-size:48px;
-            margin-bottom:20px;
+            font-size:42px;
+            margin-bottom:15px;
         }
 
         header p{
-            font-size:20px;
-            max-width:800px;
-            margin:auto;
-            line-height:1.6;
+            font-size:18px;
+            margin:10px 0;
         }
 
-        /* CONTAINER */
-
-        .container{
-            max-width:1200px;
-            margin:auto;
-            padding:60px 25px;
-        }
-
-        /* SECTION TITLE */
-
-        h2{
-            color:#1f4e79;
-            font-size:32px;
-            margin-bottom:30px;
-        }
-
-        /* CARDS */
-
-        .cards{
+        .modules{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
             gap:25px;
+            padding:50px;
+            max-width:1400px;
+            margin:auto;
         }
 
         .card{
             background:white;
-            border-radius:16px;
-            padding:30px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            border-radius:18px;
+            padding:35px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
             transition:0.3s;
+            border-top:6px solid #1f4e79;
         }
 
         .card:hover{
             transform:translateY(-5px);
         }
 
-        .card h3{
+        .module-number{
+            font-size:14px;
+            font-weight:bold;
+            color:#64748b;
+            margin-bottom:10px;
+            text-transform:uppercase;
+        }
+
+        .card h2{
+            font-size:26px;
             color:#1f4e79;
-            margin-bottom:15px;
-            font-size:24px;
+            margin-bottom:18px;
         }
 
         .card p{
-            color:#555;
-            line-height:1.6;
+            font-size:17px;
+            line-height:1.7;
+            color:#475569;
             margin-bottom:20px;
         }
 
-        .card a{
+        .tool-name{
+            background:#e2e8f0;
             display:inline-block;
-            background:#1f4e79;
-            color:white;
-            text-decoration:none;
-            padding:10px 18px;
-            border-radius:8px;
+            padding:10px 16px;
+            border-radius:10px;
+            font-size:14px;
             font-weight:bold;
-            transition:0.3s;
+            color:#0f172a;
         }
 
-        .card a:hover{
-            background:#163b5c;
+        .info-section{
+            background:white;
+            max-width:1300px;
+            margin:20px auto 50px auto;
+            padding:50px;
+            border-radius:18px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
         }
 
-        /* FOOTER */
+        .info-section h2{
+            color:#1f4e79;
+            margin-bottom:20px;
+            font-size:32px;
+        }
+
+        .info-section p{
+            font-size:18px;
+            line-height:1.9;
+            color:#475569;
+        }
 
         footer{
-            background:#163b5c;
+            background:#1f4e79;
             color:white;
             text-align:center;
             padding:35px 20px;
-            margin-top:60px;
         }
 
         footer p{
-            margin-bottom:10px;
+            margin:8px 0;
+            font-size:15px;
         }
-
-        /* RESPONSIVE */
 
         @media(max-width:768px){
 
             header h1{
-                font-size:38px;
+                font-size:32px;
             }
 
-            header p{
-                font-size:18px;
+            .modules{
+                padding:25px;
+            }
+
+            .info-section{
+                margin:20px;
+                padding:30px;
             }
 
         }
@@ -140,144 +148,120 @@
 
 <body>
 
-    <!-- HEADER -->
-
     <header>
 
-        <h1>Lab Interoperability CR</h1>
+        <h1>Lab Interoperabilidad Nacional</h1>
 
         <p>
-            Herramientas abiertas para monitoreo,
-            restauración y automatización geoespacial
-            mediante interoperabilidad entre plataformas SIG.
+            Herramientas para monitoreo, restauración y automatización geoespacial
+        </p>
+
+        <p>
+            Desarrollado por Grettel Vargas Azofeifa
         </p>
 
     </header>
 
-    <!-- CONTENT -->
+    <section class="modules">
 
-    <div class="container">
+        <div class="card">
 
-        <h2>Módulos del Laboratorio</h2>
-
-        <div class="cards">
-
-            <!-- KOBO -->
-
-            <div class="card">
-
-                <h3>KoboToolbox</h3>
-
-                <p>
-                    Captura digital de datos geoespaciales,
-                    formularios móviles y monitoreo de campo.
-                </p>
-
-                <a href="kobotoolbox/">
-                    Ver módulo
-                </a>
-
+            <div class="module-number">
+                Módulo 1
             </div>
 
-            <!-- QGIS -->
+            <h2>
+                Formularios inteligentes
+            </h2>
 
-            <div class="card">
+            <p>
+                KoboToolbox para captura de datos en campo.
+            </p>
 
-                <h3>QGIS</h3>
-
-                <p>
-                    Automatización y conexión KoboToolbox → QGIS
-                    mediante APIs y GeoJSON.
-                </p>
-
-                <a href="qgis/">
-                    Ver módulo
-                </a>
-
-            </div>
-
-            <!-- ARCGIS -->
-
-            <div class="card">
-
-                <h3>ArcGIS Pro</h3>
-
-                <p>
-                    Integración automática KoboToolbox →
-                    ArcGIS Pro usando Python y ArcPy.
-                </p>
-
-                <a href="arcgis/">
-                    Ver módulo
-                </a>
-
-            </div>
-
-            <!-- COLAB -->
-
-            <div class="card">
-
-                <h3>Google Colab</h3>
-
-                <p>
-                    APIs, automatización geoespacial,
-                    análisis espacial y procesamiento Python.
-                </p>
-
-                <a href="colab/">
-                    Ver módulo
-                </a>
-
-            </div>
-
-            <!-- GEE -->
-
-            <div class="card">
-
-                <h3>Google Earth Engine</h3>
-
-                <p>
-                    Procesamiento satelital y monitoreo
-                    de restauración e indicadores ambientales.
-                </p>
-
-                <a href="gee/">
-                    Ver módulo
-                </a>
-
-            </div>
-
-            <!-- DASHBOARD -->
-
-            <div class="card">
-
-                <h3>Dashboards y WebGIS</h3>
-
-                <p>
-                    Visualización interactiva de datos,
-                    monitoreo territorial y plataformas web.
-                </p>
-
-                <a href="dashboard/">
-                    Ver módulo
-                </a>
-
+            <div class="tool-name">
+                KoboToolbox
             </div>
 
         </div>
 
-    </div>
+        <div class="card">
 
-    <!-- FOOTER -->
+            <div class="module-number">
+                Módulo 2
+            </div>
+
+            <h2>
+                Herramientas SIG
+            </h2>
+
+            <p>
+                QGIS y ArcGIS Pro para edición, análisis y gestión geoespacial.
+            </p>
+
+            <div class="tool-name">
+                QGIS • ArcGIS Pro
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="module-number">
+                Módulo 3
+            </div>
+
+            <h2>
+                Análisis geoespacial en la nube
+            </h2>
+
+            <p>
+                Google Colab y Google Earth Engine para procesar datos, automatizar análisis y generar resultados.
+            </p>
+
+            <div class="tool-name">
+                Google Colab • Google Earth Engine
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="module-number">
+                Módulo 4
+            </div>
+
+            <h2>
+                Dashboards y estadísticas
+            </h2>
+
+            <p>
+                Visualización de indicadores, mapas, gráficos y resultados para toma de decisiones.
+            </p>
+
+            <div class="tool-name">
+                Dashboards • Estadísticas
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="info-section">
+
+        <h2>
+            Interoperabilidad Geoespacial
+        </h2>
+
+        <p>
+            Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo. El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
+        </p>
+
+    </section>
 
     <footer>
 
         <p>
             Lab Interoperability CR
-        </p>
-
-        <p>
-            KoboToolbox • QGIS • ArcGIS • Google Earth Engine
         </p>
 
         <p>
@@ -287,4 +271,5 @@
     </footer>
 
 </body>
+
 </html>
