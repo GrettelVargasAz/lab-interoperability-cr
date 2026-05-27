@@ -265,10 +265,6 @@
         </p>
 
         <p>
-            KoboToolbox • QGIS • ArcGIS Pro • Google Colab • Google Earth Engine
-        </p>
-
-        <p>
             Desarrollado por Grettel Vargas Azofeifa
         </p>
 
