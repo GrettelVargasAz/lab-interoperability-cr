@@ -64,6 +64,42 @@ li{
     margin-bottom:25px;
 }
 
+.code-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#1f4e79;
+    color:white;
+    padding:10px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    border:none;
+}
+
+.code-btn:hover{
+    background:#163a5c;
+}
+
+.code-popup{
+    display:none;
+    margin-top:20px;
+    background:#0f172a;
+    color:#e2e8f0;
+    padding:20px;
+    border-radius:14px;
+    overflow:auto;
+    max-height:500px;
+}
+
+.code-popup pre{
+    white-space:pre-wrap;
+    font-size:13px;
+    line-height:1.6;
+}
+
 .btn{
     display:inline-block;
     margin-top:30px;
@@ -130,23 +166,116 @@ li{
     </h2>
 
     <p>
-        Abrir y preparar una capa geoespacial proveniente de KoboToolbox o GeoJSON, revisar su tabla de atributos, aplicar simbología y generar un mapa básico de monitoreo.
+        En este ejercicio se trabajará un flujo de interoperabilidad entre KoboToolbox y QGIS para visualizar y actualizar automáticamente los datos recolectados en el Módulo 1.
     </p>
 
+    <p>
+        El objetivo es conectar los formularios digitales creados en KoboToolbox con QGIS utilizando la API de KoboToolbox y Python, permitiendo visualizar la información geoespacial dentro del entorno SIG.
+    </p>
+
+    <h2>
+        Paso a paso del ejercicio
+    </h2>
+
     <ul>
-        <li>Cargar una capa GeoJSON o shapefile</li>
-        <li>Revisar campos y atributos</li>
-        <li>Aplicar simbología por categoría</li>
-        <li>Verificar sistema de coordenadas</li>
-        <li>Exportar el mapa o la capa procesada</li>
+        <li>Crear un formulario de monitoreo en KoboToolbox desde el Módulo 1.</li>
+        <li>Capturar información geoespacial en campo utilizando coordenadas GPS y fotografías.</li>
+        <li>Publicar y almacenar los datos recolectados en KoboToolbox.</li>
+        <li>Obtener el TOKEN y UID del formulario mediante la API de KoboToolbox.</li>
+        <li>Configurar el script de interoperabilidad en QGIS utilizando Python y PyQGIS.</li>
+        <li>Conectar QGIS con KoboToolbox mediante solicitudes API en formato GeoJSON.</li>
+        <li>Descargar automáticamente los datos recolectados desde KoboToolbox.</li>
+        <li>Visualizar y actualizar las capas geoespaciales dentro de QGIS.</li>
+        <li>Aplicar simbología y análisis geoespacial sobre los datos recolectados.</li>
+        <li>Exportar la información para su uso posterior en dashboards, WebGIS o Google Earth Engine.</li>
     </ul>
+
+    <h2>
+        Ejemplo de interoperabilidad KoboToolbox + QGIS
+    </h2>
+
+    <p>
+        El siguiente ejemplo muestra un flujo básico de interoperabilidad utilizando la API de KoboToolbox y PyQGIS para actualizar automáticamente una capa geoespacial en QGIS.
+    </p>
+
+    <div class="info-box">
+
+        <button class="code-btn" onclick="toggleCode()">
+            Ver código API
+        </button>
+
+        <div class="code-popup" id="codePopup">
+
+<pre>
+from qgis.PyQt.QtWidgets import QAction
+from qgis.PyQt.QtGui import QIcon
+from qgis.core import QgsVectorLayer, QgsProject
+
+import requests
+import os
+
+# CONFIGURACIÓN KOBO
+
+TOKEN = "TOKEN_KOBO"
+UID = "UID_FORMULARIO"
+
+URL = f"https://kf.kobotoolbox.org/api/v2/assets/{UID}/data/?format=geojson"
+
+# DESCARGA DE DATOS
+
+response = requests.get(
+    URL,
+    headers={"Authorization": f"Token {TOKEN}"}
+)
+
+# GUARDAR GEOJSON
+
+if response.status_code == 200:
+
+    ruta = os.path.join(
+        os.path.expanduser("~"),
+        "datos_kobo.geojson"
+    )
+
+    with open(ruta, "w", encoding="utf-8") as f:
+        f.write(response.text)
+
+    # CARGAR CAPA EN QGIS
+
+    capa = QgsVectorLayer(
+        ruta,
+        "KoboToolbox",
+        "ogr"
+    )
+
+    if capa.isValid():
+
+        QgsProject.instance().addMapLayer(capa)
+
+        iface.messageBar().pushSuccess(
+            "KoboToolbox",
+            "Capa actualizada correctamente."
+        )
+</pre>
+
+        </div>
+
+    </div>
+
+    <h2>
+        Flujo de interoperabilidad
+    </h2>
+
+    <p>
+        El flujo conecta la captura de datos en campo mediante KoboToolbox con QGIS, facilitando la actualización automática de información geoespacial y fortaleciendo procesos de interoperabilidad territorial.
+    </p>
 
     <h2>
         Resultado esperado
     </h2>
 
     <p>
-        El participante podrá utilizar QGIS o ArcGIS Pro para organizar, visualizar y preparar información geoespacial que pueda integrarse posteriormente con análisis en la nube, dashboards o flujos de interoperabilidad.
+        El participante podrá utilizar QGIS para visualizar, actualizar y analizar datos recolectados en KoboToolbox mediante un flujo de interoperabilidad basado en API y GeoJSON.
     </p>
 
     <a href="index.html" class="btn">
@@ -154,6 +283,22 @@ li{
     </a>
 
 </div>
+
+<script>
+
+function toggleCode(){
+
+    var popup = document.getElementById("codePopup");
+
+    if(popup.style.display === "block"){
+        popup.style.display = "none";
+    }else{
+        popup.style.display = "block";
+    }
+
+}
+
+</script>
 
 </body>
 
