@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lab Interoperability CR</title>
+    <title>Lab Interoperabilidad Nacional</title>
 
     <style>
 
@@ -265,7 +265,7 @@
     <footer>
 
         <p>
-            Lab Interoperability CR
+            Laboratorio de Interoperabilidad Nacional
         </p>
 
         <p>
