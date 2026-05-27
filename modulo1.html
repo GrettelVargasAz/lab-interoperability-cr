@@ -66,7 +66,7 @@ li{
 
 .btn{
     display:inline-block;
-    margin-top:30px;
+    margin-top:15px;
     background:#1f4e79;
     color:white;
     text-decoration:none;
@@ -74,10 +74,43 @@ li{
     border-radius:10px;
     font-size:14px;
     font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#163a5c;
+}
+
+.popup{
+    display:none;
+    margin-top:20px;
+    background:#f8fafc;
+    border:1px solid #cbd5e1;
+    padding:25px;
+    border-radius:14px;
+}
+
+.popup h3{
+    color:#1f4e79;
+    margin-bottom:15px;
+}
+
+.download-btn{
+    display:inline-block;
+    background:#0f766e;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.download-btn:hover{
+    background:#115e59;
 }
 
 </style>
@@ -174,6 +207,30 @@ li{
 
     </ul>
 
+    <button class="btn" onclick="togglePopup()">
+        Descargar CSV de ejemplo
+    </button>
+
+    <div class="popup" id="csvPopup">
+
+        <h3>
+            Archivo CSV de monitoreo ambiental
+        </h3>
+
+        <p>
+            Descargue un archivo CSV básico para utilizarlo en ejercicios de captura de datos, interoperabilidad y visualización geoespacial.
+        </p>
+
+        <a href="formulario_monitoreo_ambiental.csv"
+           download
+           class="download-btn">
+
+           Descargar archivo CSV
+
+        </a>
+
+    </div>
+
     <h2>
         Resultado esperado
     </h2>
@@ -187,6 +244,22 @@ li{
     </a>
 
 </div>
+
+<script>
+
+function togglePopup(){
+
+    var popup = document.getElementById("csvPopup");
+
+    if(popup.style.display === "block"){
+        popup.style.display = "none";
+    }else{
+        popup.style.display = "block";
+    }
+
+}
+
+</script>
 
 </body>
 
