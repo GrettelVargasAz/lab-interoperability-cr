@@ -257,7 +257,7 @@
         </h2>
 
         <p>
-            Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo. El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
+            Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo. El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
         </p>
 
     </section>
