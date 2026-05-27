@@ -153,7 +153,7 @@
         <h1>Lab Interoperability CR</h1>
 
         <p>
-            Herramientas abiertas para monitoreo, restauración y automatización geoespacial
+            Herramientas para monitoreo, restauración y automatización geoespacial
         </p>
 
         <p>
