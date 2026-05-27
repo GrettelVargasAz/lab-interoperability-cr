@@ -22,20 +22,16 @@ body{
     color:#1e293b;
 }
 
-/* ===== HEADER ===== */
-
 header{
     background:linear-gradient(135deg,#1f4e79,#163a5c);
     color:white;
     text-align:center;
     padding:70px 20px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
 header h1{
     font-size:42px;
     margin-bottom:18px;
-    font-weight:700;
 }
 
 header p{
@@ -43,10 +39,7 @@ header p{
     max-width:950px;
     margin:auto;
     line-height:1.8;
-    opacity:0.95;
 }
-
-/* ===== CONTENIDO PRINCIPAL ===== */
 
 .content-section{
     display:flex;
@@ -56,8 +49,6 @@ header p{
     padding:45px 25px;
     align-items:flex-start;
 }
-
-/* ===== COLUMNA IZQUIERDA ===== */
 
 .left-column{
     width:28%;
@@ -86,8 +77,6 @@ header p{
     margin-bottom:15px;
 }
 
-/* ===== COLUMNA DERECHA ===== */
-
 .right-column{
     width:72%;
 }
@@ -97,8 +86,6 @@ header p{
     grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
     gap:25px;
 }
-
-/* ===== TARJETAS ===== */
 
 .card{
     background:white;
@@ -137,13 +124,11 @@ header p{
     margin-bottom:22px;
 }
 
-/* ===== TOOL + BOTÓN ===== */
-
-.tool-row{
+.tool-column{
     display:flex;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
 }
 
 .tool-name{
@@ -175,8 +160,6 @@ header p{
     box-shadow:0 5px 14px rgba(31,78,121,0.35);
 }
 
-/* ===== FOOTER ===== */
-
 footer{
     background:#1f4e79;
     color:white;
@@ -188,10 +171,7 @@ footer{
 footer p{
     margin:7px 0;
     font-size:14px;
-    opacity:0.95;
 }
-
-/* ===== RESPONSIVE ===== */
 
 @media(max-width:768px){
 
@@ -242,8 +222,6 @@ footer p{
 
 <body>
 
-<!-- ===== HEADER ===== -->
-
 <header>
 
     <h1>
@@ -251,16 +229,12 @@ footer p{
     </h1>
 
     <p>
-        Herramientas abiertas para monitoreo, restauración, automatización geoespacial e interoperabilidad entre plataformas SIG y soluciones impulsadas por la FAO.
+        Herramientas para monitoreo, restauración, automatización geoespacial e interoperabilidad entre plataformas SIG y soluciones impulsadas por la FAO.
     </p>
 
 </header>
 
-<!-- ===== CONTENIDO ===== -->
-
 <section class="content-section">
-
-    <!-- ===== COLUMNA IZQUIERDA ===== -->
 
     <div class="left-column">
 
@@ -271,7 +245,7 @@ footer p{
             </h2>
 
             <p>
-                Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo.
+                Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo.
             </p>
 
             <p>
@@ -286,13 +260,9 @@ footer p{
 
     </div>
 
-    <!-- ===== COLUMNA DERECHA ===== -->
-
     <div class="right-column">
 
         <section class="modules">
-
-            <!-- MÓDULO 1 -->
 
             <div class="card">
 
@@ -308,7 +278,7 @@ footer p{
                     KoboToolbox para captura de datos en campo.
                 </p>
 
-                <div class="tool-row">
+                <div class="tool-column">
 
                     <div class="tool-name">
                         KoboToolbox
@@ -321,8 +291,6 @@ footer p{
                 </div>
 
             </div>
-
-            <!-- MÓDULO 2 -->
 
             <div class="card">
 
@@ -338,7 +306,7 @@ footer p{
                     QGIS y ArcGIS Pro para edición, análisis y gestión geoespacial.
                 </p>
 
-                <div class="tool-row">
+                <div class="tool-column">
 
                     <div class="tool-name">
                         QGIS • ArcGIS Pro
@@ -351,8 +319,6 @@ footer p{
                 </div>
 
             </div>
-
-            <!-- MÓDULO 3 -->
 
             <div class="card">
 
@@ -368,7 +334,7 @@ footer p{
                     Google Colab y Google Earth Engine para procesar datos, automatizar análisis y generar resultados.
                 </p>
 
-                <div class="tool-row">
+                <div class="tool-column">
 
                     <div class="tool-name">
                         Google Colab • Google Earth Engine
@@ -382,8 +348,6 @@ footer p{
 
             </div>
 
-            <!-- MÓDULO 4 -->
-
             <div class="card">
 
                 <div class="module-number">
@@ -391,14 +355,14 @@ footer p{
                 </div>
 
                 <h2>
-                    Dashboards y estadísticas
+                    Dashboards
                 </h2>
 
                 <p>
-                    Visualización de indicadores, mapas, gráficos y resultados para toma de decisiones.
+                    Visualización de resultados para toma de decisiones.
                 </p>
 
-                <div class="tool-row">
+                <div class="tool-column">
 
                     <div class="tool-name">
                         Dashboards • WebGIS
@@ -411,8 +375,6 @@ footer p{
                 </div>
 
             </div>
-
-            <!-- MÓDULO 5 -->
 
             <div class="card">
 
@@ -428,10 +390,10 @@ footer p{
                     Diseño de prompts para generar scripts, automatizar análisis y apoyar el uso de inteligencia artificial aplicada a Google Earth Engine.
                 </p>
 
-                <div class="tool-row">
+                <div class="tool-column">
 
                     <div class="tool-name">
-                        IA • Prompt Engineering • GEE
+                        IA • Prompt • GEE
                     </div>
 
                     <a href="modulo5.html" class="btn">
@@ -447,8 +409,6 @@ footer p{
     </div>
 
 </section>
-
-<!-- ===== FOOTER ===== -->
 
 <footer>
 
