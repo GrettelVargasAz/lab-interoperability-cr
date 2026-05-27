@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Interoperability CR</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f5f5f5;
+        }
+
+        header{
+            background:#1f4e79;
+            color:white;
+            padding:60px;
+            text-align:center;
+        }
+
+        h1{
+            margin:0;
+            font-size:42px;
+        }
+
+        .container{
+            padding:40px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h2{
+            margin-top:0;
+        }
+
+        .card a{
+            text-decoration:none;
+            color:#1f4e79;
+            font-weight:bold;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#ddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Lab Interoperability CR</h1>
+
+    <p>
+        Herramientas abiertas para monitoreo,
+        restauración y automatización geoespacial.
+    </p>
+
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <h2>QGIS</h2>
+
+        <p>
+            Scripts y automatización KoboToolbox → QGIS.
+        </p>
+
+        <a href="qgis/">Ver módulo</a>
+    </div>
+
+    <div class="card">
+        <h2>ArcGIS Pro</h2>
+
+        <p>
+            Integración Kobo → ArcGIS Pro.
+        </p>
+
+        <a href="arcgis/">Ver módulo</a>
+    </div>
+
+    <div class="card">
+        <h2>Google Earth Engine</h2>
+
+        <p>
+            Scripts y análisis satelital.
+        </p>
+
+        <a href="gee/">Ver módulo</a>
+    </div>
+
+    <div class="card">
+        <h2>Google Colab</h2>
+
+        <p>
+            APIs, automatización y notebooks.
+        </p>
+
+        <a href="colab/">Ver módulo</a>
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        Laboratorio de Interoperabilidad Geoespacial CR
+    </p>
+
+</footer>
+
+</body>
+</html>
