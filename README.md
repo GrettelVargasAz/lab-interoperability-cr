@@ -26,7 +26,7 @@
             background:#1f4e79;
             color:white;
             text-align:center;
-            padding:50px 20px;
+            padding:60px 20px;
         }
 
         header h1{
@@ -36,12 +36,12 @@
 
         header p{
             font-size:18px;
-            margin:8px 0;
+            margin:10px 0;
         }
 
         .modules{
             display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
             gap:25px;
             padding:50px;
             max-width:1400px;
@@ -51,8 +51,8 @@
         .card{
             background:white;
             border-radius:18px;
-            padding:35px 25px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            padding:35px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
             transition:0.3s;
             border-top:6px solid #1f4e79;
         }
@@ -61,48 +61,44 @@
             transform:translateY(-5px);
         }
 
+        .module-number{
+            font-size:14px;
+            font-weight:bold;
+            color:#64748b;
+            margin-bottom:10px;
+            text-transform:uppercase;
+        }
+
         .card h2{
-            font-size:24px;
-            margin-bottom:15px;
+            font-size:26px;
             color:#1f4e79;
+            margin-bottom:18px;
         }
 
         .card p{
-            font-size:16px;
-            line-height:1.6;
-            margin-bottom:20px;
+            font-size:17px;
+            line-height:1.7;
             color:#475569;
+            margin-bottom:20px;
         }
 
-        .tools{
+        .tool-name{
+            background:#e2e8f0;
+            display:inline-block;
+            padding:10px 16px;
+            border-radius:10px;
             font-size:14px;
             font-weight:bold;
             color:#0f172a;
-            margin-bottom:20px;
-        }
-
-        .btn{
-            display:inline-block;
-            text-decoration:none;
-            background:#1f4e79;
-            color:white;
-            padding:12px 20px;
-            border-radius:10px;
-            transition:0.3s;
-            font-size:14px;
-        }
-
-        .btn:hover{
-            background:#163a5c;
         }
 
         .info-section{
             background:white;
-            margin:40px auto;
             max-width:1300px;
+            margin:20px auto 50px auto;
             padding:50px;
             border-radius:18px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
         }
 
         .info-section h2{
@@ -113,7 +109,7 @@
 
         .info-section p{
             font-size:18px;
-            line-height:1.8;
+            line-height:1.9;
             color:#475569;
         }
 
@@ -121,8 +117,7 @@
             background:#1f4e79;
             color:white;
             text-align:center;
-            padding:30px 20px;
-            margin-top:50px;
+            padding:35px 20px;
         }
 
         footer p{
@@ -175,73 +170,81 @@
 
         <div class="card">
 
-            <h2>Formularios Inteligentes</h2>
+            <div class="module-number">
+                Módulo 1
+            </div>
+
+            <h2>
+                Formularios inteligentes
+            </h2>
 
             <p>
-                Captura de información de campo mediante formularios digitales y geoespaciales para monitoreo de ecosistemas.
+                KoboToolbox para captura de datos en campo.
             </p>
 
-            <div class="tools">
+            <div class="tool-name">
                 KoboToolbox
             </div>
 
-            <a href="#" class="btn">
-                Ver módulo
-            </a>
-
         </div>
 
         <div class="card">
 
-            <h2>Herramientas SIG</h2>
+            <div class="module-number">
+                Módulo 2
+            </div>
+
+            <h2>
+                Herramientas SIG
+            </h2>
 
             <p>
-                Gestión, análisis y visualización de datos espaciales utilizando plataformas SIG de escritorio.
+                QGIS y ArcGIS Pro para edición, análisis y gestión geoespacial.
             </p>
 
-            <div class="tools">
+            <div class="tool-name">
                 QGIS • ArcGIS Pro
             </div>
 
-            <a href="#" class="btn">
-                Ver módulo
-            </a>
-
         </div>
 
         <div class="card">
 
-            <h2>Análisis Geoespacial en la Nube</h2>
+            <div class="module-number">
+                Módulo 3
+            </div>
+
+            <h2>
+                Análisis geoespacial en la nube
+            </h2>
 
             <p>
-                Procesamiento, automatización y análisis avanzado de información satelital y datos ambientales.
+                Google Colab y Google Earth Engine para procesar datos, automatizar análisis y generar resultados.
             </p>
 
-            <div class="tools">
+            <div class="tool-name">
                 Google Colab • Google Earth Engine
             </div>
 
-            <a href="#" class="btn">
-                Ver módulo
-            </a>
-
         </div>
 
         <div class="card">
 
-            <h2>Dashboards y Estadísticas</h2>
-
-            <p>
-                Visualización de indicadores, gráficos, mapas y reportes para apoyo a la toma de decisiones.
-            </p>
-
-            <div class="tools">
-                WebGIS • Dashboards • Indicadores
+            <div class="module-number">
+                Módulo 4
             </div>
 
-            <a href="#" class="btn">
-                Ver módulo
-            </a>
+            <h2>
+                Dashboards y estadísticas
+            </h2>
+
+            <p>
+                Visualización de indicadores, mapas, gráficos y resultados para toma de decisiones.
+            </p>
+
+            <div class="tool-name">
+                Dashboards • WebGIS • Estadísticas
+            </div>
 
         </div>
 
@@ -249,11 +252,12 @@
 
     <section class="info-section">
 
-        <h2>Interoperabilidad Geoespacial</h2>
+        <h2>
+            Interoperabilidad Geoespacial
+        </h2>
 
         <p>
-            Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo.
-            El enfoque busca conectar formularios digitales, SIG de escritorio, procesamiento en la nube y sistemas de visualización para facilitar el análisis, la integración y el uso estratégico de información territorial.
+            Este laboratorio integra herramientas abiertas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo. El enfoque busca conectar formularios digitales, sistemas SIG, procesamiento en la nube y visualización de información territorial de manera simple, práctica e interoperable.
         </p>
 
     </section>
