@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Módulo 1 - Formularios inteligentes</title>
 
 <style>
-
 body{
     font-family: Arial, sans-serif;
     background:#eef2f7;
@@ -26,23 +23,24 @@ body{
     box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
-h1{
+h1, h2{
     color:#1f4e79;
+}
+
+h1{
     margin-bottom:20px;
     font-size:38px;
 }
 
 h2{
-    color:#1f4e79;
     margin-top:35px;
     margin-bottom:15px;
 }
 
-p{
+p, li{
     font-size:17px;
     line-height:1.9;
     color:#475569;
-    margin-bottom:18px;
 }
 
 ul{
@@ -50,18 +48,11 @@ ul{
     margin-bottom:20px;
 }
 
-li{
-    margin-bottom:12px;
-    line-height:1.7;
-    color:#475569;
-}
-
 .info-box{
     background:#e2e8f0;
     padding:20px;
     border-radius:14px;
-    margin-top:20px;
-    margin-bottom:25px;
+    margin:20px 0 25px 0;
 }
 
 .btn{
@@ -76,7 +67,6 @@ li{
     font-weight:bold;
     border:none;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .btn:hover{
@@ -112,131 +102,78 @@ li{
 .download-btn:hover{
     background:#115e59;
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>
-        Módulo 1: Formularios inteligentes
-    </h1>
+    <h1>Módulo 1: Formularios inteligentes</h1>
 
     <p>
         Introducción al uso de KoboToolbox para captura de información geoespacial en campo orientada a monitoreo ambiental, restauración de ecosistemas y recopilación de datos territoriales.
     </p>
 
     <div class="info-box">
-
         <strong>Herramienta principal:</strong> KoboToolbox
-
     </div>
 
-    <h2>
-        Objetivo del módulo
-    </h2>
+    <h2>Objetivo del módulo</h2>
 
     <p>
         Aprender los principios básicos para diseñar formularios digitales y recopilar información geográfica desde dispositivos móviles o navegadores web.
     </p>
 
-    <h2>
-        Contenidos
-    </h2>
+    <h2>Contenidos</h2>
 
     <ul>
-
-        <li>
-            Introducción a KoboToolbox
-        </li>
-
-        <li>
-            Creación de formularios digitales
-        </li>
-
-        <li>
-            Captura de coordenadas geográficas
-        </li>
-
-        <li>
-            Recolección de fotografías en campo
-        </li>
-
-        <li>
-            Exportación de datos CSV y GeoJSON
-        </li>
-
-        <li>
-            Integración con SIG
-        </li>
-
+        <li>Introducción a KoboToolbox</li>
+        <li>Creación de formularios digitales</li>
+        <li>Captura de coordenadas geográficas</li>
+        <li>Recolección de fotografías en campo</li>
+        <li>Exportación de datos CSV y GeoJSON</li>
+        <li>Integración con SIG</li>
     </ul>
 
-    <h2>
-        Ejercicio práctico
-    </h2>
+    <h2>Ejercicio práctico</h2>
 
     <p>
         Crear un formulario básico para captura de puntos de monitoreo ambiental incluyendo:
     </p>
 
     <ul>
-
-        <li>
-            Nombre del sitio
-        </li>
-
-        <li>
-            Coordenadas GPS
-        </li>
-
-        <li>
-            Tipo de ecosistema
-        </li>
-
-        <li>
-            Fotografía
-        </li>
-
-        <li>
-            Observaciones
-        </li>
-
+        <li>Nombre del sitio</li>
+        <li>Coordenadas GPS</li>
+        <li>Tipo de ecosistema</li>
+        <li>Fotografía</li>
+        <li>Observaciones</li>
     </ul>
 
     <button class="btn" onclick="togglePopup()">
-        Descargar CSV de ejemplo
+        Descargar XLSForm de ejemplo
     </button>
 
-    <div class="popup" id="csvPopup">
+    <div class="popup" id="xlsformPopup">
 
-        <h3>
-            Archivo CSV de monitoreo ambiental
-        </h3>
+        <h3>Archivo XLSForm para KoboToolbox</h3>
 
         <p>
-            Descargue un archivo CSV básico para utilizarlo en ejercicios de captura de datos, interoperabilidad y visualización geoespacial.
+            Descargue el archivo XLSForm en formato Excel para importarlo directamente en KoboToolbox y crear el formulario de monitoreo ambiental.
         </p>
 
-        <a href="formulario_monitoreo_ambiental.csv"
+        <a href="formulario_monitoreo_ambiental_xlsform.xlsx"
            download
            class="download-btn">
-
-           Descargar archivo CSV
-
+           Descargar
         </a>
 
     </div>
 
-    <h2>
-        Resultado esperado
-    </h2>
+    <h2>Resultado esperado</h2>
 
     <p>
-        El participante podrá diseñar formularios simples y generar información geoespacial lista para ser utilizada en QGIS, ArcGIS Pro o Google Earth Engine.
+        El participante podrá importar un XLSForm en KoboToolbox, crear un formulario básico de monitoreo ambiental y generar información geoespacial lista para ser utilizada en QGIS, ArcGIS Pro o Google Earth Engine.
     </p>
 
     <a href="index.html" class="btn">
@@ -246,21 +183,16 @@ li{
 </div>
 
 <script>
-
 function togglePopup(){
-
-    var popup = document.getElementById("csvPopup");
+    var popup = document.getElementById("xlsformPopup");
 
     if(popup.style.display === "block"){
         popup.style.display = "none";
     }else{
         popup.style.display = "block";
     }
-
 }
-
 </script>
 
 </body>
-
 </html>
