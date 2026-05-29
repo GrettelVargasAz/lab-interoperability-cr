@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Laboratorio de Interoperabilidad Geoespacial</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -17,169 +13,221 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background:#eef2f7;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#f4f7fb;
     color:#1e293b;
 }
 
 header{
-    background:linear-gradient(135deg,#1f4e79,#163a5c);
+    background:linear-gradient(135deg,#12395a,#1f4e79);
     color:white;
+    padding:85px 25px;
     text-align:center;
-    padding:70px 20px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.16);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:22px;
 }
 
 header h1{
-    font-size:42px;
+    font-size:44px;
     margin-bottom:18px;
+    line-height:1.2;
 }
 
 header p{
-    font-size:17px;
-    max-width:1000px;
+    max-width:980px;
     margin:auto;
+    font-size:18px;
     line-height:1.8;
+    color:#e2e8f0;
 }
 
 .content-section{
-    display:flex;
-    gap:35px;
     max-width:1500px;
     margin:auto;
-    padding:45px 25px;
+    display:flex;
+    gap:34px;
+    padding:50px 25px;
     align-items:flex-start;
 }
 
 .left-column{
-    width:30%;
+    width:31%;
     position:sticky;
-    top:20px;
+    top:22px;
 }
 
 .intro-box{
     background:white;
-    padding:30px;
-    border-radius:22px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    border-left:6px solid #1f4e79;
+    border-radius:24px;
+    padding:34px;
+    box-shadow:0 12px 30px rgba(15,23,42,0.08);
+    border:1px solid #e2e8f0;
 }
 
 .intro-box h2{
-    font-size:28px;
     color:#1f4e79;
-    margin-bottom:20px;
+    font-size:27px;
+    margin-bottom:18px;
 }
 
 .intro-box h3{
-    color:#1f4e79;
-    margin-top:25px;
-    margin-bottom:12px;
-    font-size:18px;
+    color:#12395a;
+    font-size:17px;
+    margin-top:26px;
+    margin-bottom:10px;
 }
 
 .intro-box p{
+    font-size:14.5px;
+    line-height:1.85;
+    color:#475569;
+    margin-bottom:14px;
+}
+
+.flow{
+    background:#f1f5f9;
+    border-left:5px solid #1f4e79;
+    padding:16px;
+    border-radius:14px;
     font-size:14px;
     line-height:1.8;
-    color:#475569;
-    margin-bottom:15px;
+    color:#334155;
+    font-weight:600;
 }
 
 .right-column{
-    width:70%;
+    width:69%;
+}
+
+.section-title{
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:30px;
+    color:#12395a;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#64748b;
+    font-size:15px;
+    line-height:1.7;
 }
 
 .modules{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+    gap:26px;
 }
 
 .card{
     background:white;
-    border-radius:22px;
+    border-radius:24px;
     padding:30px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
-    transition:all 0.3s ease;
-    border-top:5px solid #1f4e79;
+    box-shadow:0 10px 26px rgba(15,23,42,0.07);
+    border:1px solid #e2e8f0;
+    transition:all .3s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(90deg,#1f4e79,#2c7fb8);
 }
 
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    box-shadow:0 16px 36px rgba(15,23,42,0.12);
 }
 
 .module-number{
     font-size:12px;
-    font-weight:bold;
+    font-weight:700;
     color:#64748b;
-    margin-bottom:12px;
     text-transform:uppercase;
-    letter-spacing:1px;
+    letter-spacing:1.1px;
+    margin-bottom:14px;
 }
 
 .card h2{
-    font-size:23px;
     color:#1f4e79;
-    margin-bottom:18px;
+    font-size:23px;
     line-height:1.3;
+    margin-bottom:16px;
 }
 
 .card p{
-    font-size:15px;
-    line-height:1.8;
     color:#475569;
+    font-size:15px;
+    line-height:1.75;
     margin-bottom:22px;
 }
 
 .tool-column{
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:16px;
+    align-items:flex-start;
 }
 
 .tool-name{
     display:inline-block;
-    background:#e2e8f0;
+    background:#eef4fa;
+    color:#12395a;
     padding:10px 15px;
-    border-radius:12px;
+    border-radius:999px;
     font-size:12px;
-    font-weight:bold;
-    color:#0f172a;
+    font-weight:700;
 }
 
 .btn{
     display:inline-block;
     background:#1f4e79;
     color:white;
-    text-decoration:none;
-    padding:10px 18px;
+    padding:11px 20px;
     border-radius:12px;
+    text-decoration:none;
     font-size:13px;
-    font-weight:bold;
-    transition:all 0.3s ease;
-    box-shadow:0 3px 10px rgba(31,78,121,0.25);
+    font-weight:700;
+    box-shadow:0 6px 14px rgba(31,78,121,0.25);
+    transition:all .3s ease;
 }
 
 .btn:hover{
-    background:#163a5c;
+    background:#12395a;
     transform:translateY(-2px);
 }
 
 footer{
-    background:#1f4e79;
+    background:#12395a;
     color:white;
     text-align:center;
-    padding:35px 20px;
-    margin-top:30px;
+    padding:38px 20px;
 }
 
 footer p{
-    margin:7px 0;
     font-size:14px;
+    margin:7px 0;
+    color:#e2e8f0;
 }
 
-@media(max-width:768px){
-
+@media(max-width:900px){
     .content-section{
         flex-direction:column;
     }
@@ -194,81 +242,85 @@ footer p{
         top:0;
     }
 
+    header h1{
+        font-size:32px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+}
+
+@media(max-width:600px){
     .modules{
         grid-template-columns:1fr;
     }
 
-    header h1{
-        font-size:30px;
+    .intro-box,
+    .card{
+        padding:24px;
     }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
 <header>
+    <div class="badge">
+        Curso práctico · SIG · IA · FAO · Monitoreo Ambiental
+    </div>
 
     <h1>
         Laboratorio de Interoperabilidad Geoespacial
     </h1>
 
     <p>
-        Laboratorio práctico orientado a la interoperabilidad geoespacial, monitoreo ambiental, restauración de ecosistemas, inteligencia artificial y automatización de flujos de trabajo utilizando herramientas SIG modernas y plataformas impulsadas por la FAO.
+        Espacio práctico para integrar herramientas SIG modernas, plataformas impulsadas por la FAO, procesamiento geoespacial en la nube, inteligencia artificial y visualización de resultados aplicados al monitoreo ambiental y la restauración de ecosistemas.
     </p>
-
 </header>
 
 <section class="content-section">
 
-    <div class="left-column">
-
+    <aside class="left-column">
         <div class="intro-box">
 
-            <h2>
-                Interoperabilidad Geoespacial
-            </h2>
+            <h2>Interoperabilidad Geoespacial</h2>
 
             <p>
-                Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas, análisis territorial e interoperabilidad entre sistemas de información.
+                Este laboratorio está diseñado para fortalecer capacidades técnicas en el uso integrado de herramientas digitales aplicadas a la recopilación, gestión, análisis, automatización y comunicación de información geoespacial.
             </p>
 
             <p>
-                El enfoque promueve la conexión entre captura de datos en campo, sistemas de información geográfica, plataformas impulsadas por la FAO, procesamiento geoespacial en la nube, inteligencia artificial y herramientas de visualización para apoyar la toma de decisiones basada en evidencia.
+                Su enfoque permite conectar datos de campo, sistemas SIG, plataformas FAO, análisis satelital, inteligencia artificial y productos de visualización para apoyar procesos de monitoreo, restauración y toma de decisiones basada en evidencia.
             </p>
 
-            <h3>
-                Objetivo
-            </h3>
-
+            <h3>Objetivo</h3>
             <p>
-                Fortalecer las capacidades técnicas de los participantes mediante el uso integrado de herramientas digitales para la recopilación, gestión, análisis, automatización y visualización de información geoespacial aplicada al monitoreo ambiental y la restauración de ecosistemas.
+                Desarrollar competencias prácticas para construir flujos de trabajo interoperables orientados al monitoreo ambiental, restauración de ecosistemas y análisis territorial.
             </p>
 
-            <h3>
-                Dirigido a
-            </h3>
-
+            <h3>Dirigido a</h3>
             <p>
-                Técnicos y profesionales vinculados al monitoreo ambiental, restauración de ecosistemas, gestión territorial, cambio climático, recursos naturales, agricultura, instituciones públicas, organizaciones no gubernamentales, universidades y personas interesadas en el uso de tecnologías geoespaciales modernas.
+                Estudiantes, técnicos, profesionales SIG, instituciones públicas, organizaciones ambientales, universidades y personas vinculadas a monitoreo, restauración, cambio climático, recursos naturales y gestión territorial.
             </p>
 
-            <h3>
-                Flujo de trabajo
-            </h3>
-
-            <p>
-                Captura de datos → Gestión SIG → Plataformas FAO → Procesamiento en la nube → Inteligencia Artificial → Dashboards y WebGIS.
-            </p>
+            <h3>Flujo de trabajo</h3>
+            <div class="flow">
+                Captura de datos → Gestión SIG → Plataformas FAO → Procesamiento en la nube → Inteligencia Artificial → Dashboards y WebGIS
+            </div>
 
         </div>
+    </aside>
 
-    </div>
+    <main class="right-column">
 
-    <div class="right-column">
+        <div class="section-title">
+            <h2>Módulos del laboratorio</h2>
+            <p>
+                Cada módulo responde a una etapa del flujo de trabajo geoespacial, desde la captura de datos hasta la comunicación de resultados.
+            </p>
+        </div>
 
         <section class="modules">
 
@@ -322,7 +374,7 @@ footer p{
 
             <div class="card">
                 <div class="module-number">Módulo 5</div>
-                <h2>IA Aplicada al Monitoreo Ambiental</h2>
+                <h2>Inteligencia Artificial Aplicada al Monitoreo Ambiental</h2>
                 <p>
                     Creación de prompts y uso de inteligencia artificial para generar scripts, automatizar análisis y apoyar procesos geoespaciales.
                 </p>
@@ -345,21 +397,13 @@ footer p{
             </div>
 
         </section>
-
-    </div>
+    </main>
 
 </section>
 
 <footer>
-
-    <p>
-        Laboratorio de Interoperabilidad Geoespacial
-    </p>
-
-    <p>
-        Desarrollado por Grettel Vargas Azofeifa
-    </p>
-
+    <p>Laboratorio de Interoperabilidad Geoespacial</p>
+    <p>Desarrollado por Grettel Vargas Azofeifa</p>
 </footer>
 
 </body>
