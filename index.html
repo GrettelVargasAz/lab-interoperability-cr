@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Laboratorio de Interoperabilidad CR</title>
+<title>Laboratorio de Interoperabilidad Geoespacial</title>
 
 <style>
 
@@ -36,7 +36,7 @@ header h1{
 
 header p{
     font-size:17px;
-    max-width:950px;
+    max-width:1000px;
     margin:auto;
     line-height:1.8;
 }
@@ -51,7 +51,7 @@ header p{
 }
 
 .left-column{
-    width:28%;
+    width:30%;
     position:sticky;
     top:20px;
 }
@@ -65,9 +65,16 @@ header p{
 }
 
 .intro-box h2{
-    font-size:30px;
+    font-size:28px;
     color:#1f4e79;
     margin-bottom:20px;
+}
+
+.intro-box h3{
+    color:#1f4e79;
+    margin-top:25px;
+    margin-bottom:12px;
+    font-size:18px;
 }
 
 .intro-box p{
@@ -78,12 +85,12 @@ header p{
 }
 
 .right-column{
-    width:72%;
+    width:70%;
 }
 
 .modules{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
     gap:25px;
 }
 
@@ -111,7 +118,7 @@ header p{
 }
 
 .card h2{
-    font-size:24px;
+    font-size:23px;
     color:#1f4e79;
     margin-bottom:18px;
     line-height:1.3;
@@ -127,7 +134,6 @@ header p{
 .tool-column{
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
     gap:14px;
 }
 
@@ -157,7 +163,6 @@ header p{
 .btn:hover{
     background:#163a5c;
     transform:translateY(-2px);
-    box-shadow:0 5px 14px rgba(31,78,121,0.35);
 }
 
 footer{
@@ -175,21 +180,8 @@ footer p{
 
 @media(max-width:768px){
 
-    header{
-        padding:50px 20px;
-    }
-
-    header h1{
-        font-size:30px;
-    }
-
-    header p{
-        font-size:15px;
-    }
-
     .content-section{
         flex-direction:column;
-        padding:25px 15px;
     }
 
     .left-column,
@@ -202,16 +194,12 @@ footer p{
         top:0;
     }
 
-    .intro-box{
-        padding:25px;
-    }
-
-    .intro-box h2{
-        font-size:24px;
-    }
-
     .modules{
         grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:30px;
     }
 
 }
@@ -225,11 +213,11 @@ footer p{
 <header>
 
     <h1>
-        Laboratorio de Interoperabilidad CR
+        Laboratorio de Interoperabilidad Geoespacial
     </h1>
 
     <p>
-        Herramientas para monitoreo, restauración, automatización geoespacial e interoperabilidad entre plataformas SIG y soluciones impulsadas por la FAO.
+        Laboratorio práctico orientado a la interoperabilidad geoespacial, monitoreo ambiental, restauración de ecosistemas, inteligencia artificial y automatización de flujos de trabajo utilizando herramientas SIG modernas y plataformas impulsadas por la FAO.
     </p>
 
 </header>
@@ -245,15 +233,35 @@ footer p{
             </h2>
 
             <p>
-                Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas y automatización de flujos de trabajo.
+                Este laboratorio integra herramientas y plataformas geoespaciales modernas para fortalecer procesos de monitoreo, restauración de ecosistemas, análisis territorial e interoperabilidad entre sistemas de información.
             </p>
 
             <p>
-                El enfoque busca conectar formularios digitales, sistemas SIG, herramientas FAO, procesamiento en la nube, inteligencia artificial y visualización de información territorial.
+                El enfoque promueve la conexión entre captura de datos en campo, sistemas de información geográfica, plataformas impulsadas por la FAO, procesamiento geoespacial en la nube, inteligencia artificial y herramientas de visualización para apoyar la toma de decisiones basada en evidencia.
             </p>
 
+            <h3>
+                Objetivo
+            </h3>
+
             <p>
-                Asimismo, en el marco del curso SEPAL, se incorporan nuevos temas orientados a fortalecer la interoperabilidad entre herramientas geoespaciales y otras plataformas impulsadas por la FAO.
+                Fortalecer las capacidades técnicas de los participantes mediante el uso integrado de herramientas digitales para la recopilación, gestión, análisis, automatización y visualización de información geoespacial aplicada al monitoreo ambiental y la restauración de ecosistemas.
+            </p>
+
+            <h3>
+                Dirigido a
+            </h3>
+
+            <p>
+                Técnicos y profesionales vinculados al monitoreo ambiental, restauración de ecosistemas, gestión territorial, cambio climático, recursos naturales, agricultura, instituciones públicas, organizaciones no gubernamentales, universidades y personas interesadas en el uso de tecnologías geoespaciales modernas.
+            </p>
+
+            <h3>
+                Flujo de trabajo
+            </h3>
+
+            <p>
+                Captura de datos → Gestión SIG → Plataformas FAO → Procesamiento en la nube → Inteligencia Artificial → Dashboards y WebGIS.
             </p>
 
         </div>
@@ -265,171 +273,75 @@ footer p{
         <section class="modules">
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 1
-                </div>
-
-                <h2>
-                    Formularios inteligentes
-                </h2>
-
+                <div class="module-number">Módulo 1</div>
+                <h2>Captura Inteligente de Datos</h2>
                 <p>
-                    KoboToolbox para captura de datos en campo.
+                    Formularios digitales para recopilar información geoespacial en campo y fortalecer procesos de monitoreo ambiental.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        KoboToolbox
-                    </div>
-
-                    <a href="modulo1.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">KoboToolbox</div>
+                    <a href="modulo1.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 2
-                </div>
-
-                <h2>
-                    Herramientas SIG
-                </h2>
-
+                <div class="module-number">Módulo 2</div>
+                <h2>Gestión y Preparación de Datos Geoespaciales</h2>
                 <p>
-                    QGIS y ArcGIS Pro para edición, análisis y gestión geoespacial.
+                    Preparación, edición y organización de datos espaciales para análisis, monitoreo y generación de información territorial.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        QGIS • ArcGIS Pro
-                    </div>
-
-                    <a href="modulo2.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">QGIS • ArcGIS Pro</div>
+                    <a href="modulo2.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 3
-                </div>
-
-                <h2>
-                    Herramientas FAO
-                </h2>
-
+                <div class="module-number">Módulo 3</div>
+                <h2>Monitoreo con Plataformas FAO</h2>
                 <p>
-                    Plataformas impulsadas por la FAO para monitoreo territorial, interpretación de imágenes satelitales y análisis geoespacial.
+                    Uso de herramientas impulsadas por la FAO para interpretación de imágenes, monitoreo territorial y restauración de ecosistemas.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        SEPAL • CEO • Open Foris
-                    </div>
-
-                    <a href="modulo3.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">SEPAL • CEO • Open Foris • EarthMap</div>
+                    <a href="modulo3.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 4
-                </div>
-
-                <h2>
-                    Análisis geoespacial en la nube
-                </h2>
-
+                <div class="module-number">Módulo 4</div>
+                <h2>Procesamiento Geoespacial en la Nube</h2>
                 <p>
-                    Google Colab y Google Earth Engine para procesar datos, automatizar análisis y generar resultados.
+                    Análisis satelital, automatización y procesamiento de información utilizando Google Earth Engine y Google Colab.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        Google Colab • Google Earth Engine
-                    </div>
-
-                    <a href="modulo4.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">Google Earth Engine • Colab</div>
+                    <a href="modulo4.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 5
-                </div>
-
-                <h2>
-                    Creación de prompts
-                </h2>
-
+                <div class="module-number">Módulo 5</div>
+                <h2>IA Aplicada al Monitoreo Ambiental</h2>
                 <p>
-                    Diseño de prompts para generar scripts, automatizar análisis y apoyar el uso de inteligencia artificial aplicada a Google Earth Engine.
+                    Creación de prompts y uso de inteligencia artificial para generar scripts, automatizar análisis y apoyar procesos geoespaciales.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        IA • Prompt • GEE
-                    </div>
-
-                    <a href="modulo5.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">IA • Prompts • Copilot • Gemini</div>
+                    <a href="modulo5.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
             <div class="card">
-
-                <div class="module-number">
-                    Módulo 6
-                </div>
-
-                <h2>
-                    Dashboards y WebGIS
-                </h2>
-
+                <div class="module-number">Módulo 6</div>
+                <h2>Visualización y Comunicación de Resultados</h2>
                 <p>
-                    Visualización de mapas, indicadores y resultados geoespaciales para monitoreo y toma de decisiones.
+                    Creación de dashboards, mapas web y productos interactivos para comunicar resultados y apoyar la toma de decisiones.
                 </p>
-
                 <div class="tool-column">
-
-                    <div class="tool-name">
-                        Dashboards • WebGIS • Leaflet
-                    </div>
-
-                    <a href="modulo6.html" class="btn">
-                        Ver módulo
-                    </a>
-
+                    <div class="tool-name">Dashboards • WebGIS • Leaflet • GitHub Pages</div>
+                    <a href="modulo6.html" class="btn">Ver módulo</a>
                 </div>
-
             </div>
 
         </section>
@@ -441,7 +353,7 @@ footer p{
 <footer>
 
     <p>
-        Laboratorio de Interoperabilidad CR
+        Laboratorio de Interoperabilidad Geoespacial
     </p>
 
     <p>
@@ -451,5 +363,4 @@ footer p{
 </footer>
 
 </body>
-
 </html>
